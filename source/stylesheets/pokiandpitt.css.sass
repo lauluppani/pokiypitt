@@ -8,8 +8,28 @@
 @import mixins.sass
 
 // Vendor
+@import animated-hamburguer-icon.sass
 @import vendor/_bootstrap-grid.scss
+@import vendor/slick.scss
+@import vendor/jquery.fancybox.min.scss
 
+// Sections
+@import header.sass
+@import footer.sass
+
+@import hero.sass
+@import quote.sass
+@import ceremony.sass
+@import rsvp.sass
+@import gifts.sass
+@import map.sass
+@import gallery.sass
+@import counter.sass
+
+
+html, body
+  // overflow-x: hidden
+  
 body
   -webkit-text-size-adjust: 100%
   background: $charcoal
@@ -29,3 +49,10 @@ body
       @media (max-width: 767px)
         padding-left: 0
         padding-right: 0
+
+  a
+    @include transition(all, 0.2s)
+    color: $gold
+    text-decoration: none
+    &:hover
+      opacity: 0.75
