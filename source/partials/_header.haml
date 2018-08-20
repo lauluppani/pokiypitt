@@ -1,18 +1,17 @@
 %header
-  .wrapper
+  %nav
     .row
-      .col-md-2
-        %a.logo{:href=>"/"}
-          / %img{:src=>"/images/logo.svg", :alt=>"Miami Jewish Montessori", :width=>"105", :height=>"117"}
-      .col-md-8
-        %nav
-          / %a{nav_active('index.html'), :href=>"/"} Home
-          / %a{nav_active('about'), :href=>"/about.html"} About Us
-          / %a.blue{nav_active('programs'), :href=>"/programs.html"} Programs
-          / %a.pink{nav_active('resources'), :href=>"/resources.html"} Resources
-          / %a{nav_active('blog'), :href=>"/blog"} Blog
-          / %a{nav_active('gallery'), :href=>"/gallery.html"} Gallery
-          / %a.green_dark{nav_active('contact'), :href=>"/contact.html"} Contact Us
+      .col-md-4.nav-left
+        %a{:href=>"#ceremony", :class=>"page-scroll"} Ceremonia
+        %a{:href=>"#rsvp", :class=>"page-scroll"} RSVP
+        %a{:href=>"#gifts", :class=>"page-scroll"} Regalos
+      .col-md-2.nav-middle
+        %a.logo{:href=>"#page-top", :class=>"page-scroll"}
+          %span J&M
+      .col-md-4.nav-right
+        %a{:href=>"#map", :class=>"page-scroll"} Cómo Llegar
+        %a{:href=>"#gallery", :class=>"page-scroll"} Galería
+        %a{:href=>"#pokiandpitt", :class=>"page-scroll"} #Poki&Pitt
 
   %button.lines-button.x{"aria-label" => "Toggle Navigation", :role => "button", :type => "button"}
     %span.lines

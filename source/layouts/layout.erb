@@ -26,12 +26,12 @@
     <script src='/javascripts/vendor/slick.min.js'></script>
     <script src='/javascripts/vendor/jquery.matchHeight.js'></script>
     <%= javascript_include_tag "vendor/jquery.fancybox.min" %>
-    <script src='/javascripts/vendor/jquery.nav.js'></script>
+    <script src='/javascripts/vendor/page-scroll.js'></script>
    
     <%= javascript_include_tag "apps" %>
 
   </head>
-  <body>
+  <body id="page-top">
     <%= partial "partials/_header.haml" %>
     <%= yield %>
     <%= partial "partials/_footer.haml" %>
