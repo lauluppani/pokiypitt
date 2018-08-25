@@ -1,3 +1,70 @@
 section#hero
   background: $charcoal url(../images/pattern-black.svg) repeat center center
+  background-size: 40% auto
   min-height: 740px
+  padding-top: 78px
+  position: relative
+  text-align: center
+  &:before, &:after
+    content: ""
+    height: 715px
+    width: 85px
+    position: absolute
+    z-index: 0
+    top: 78px
+
+  &:before
+    background: url(../images/left-frame.svg)
+    left: 20px
+  &:after
+    background: url(../images/right-frame.svg)
+    right: 20px
+
+  hgroup
+    padding-top: 150px
+    h1
+      background: url(../images/poki-and-pitt.svg) no-repeat center center
+      background-size: contain
+      color: $beige
+      display: block
+      font-family: 'LearningCurve'
+      font-size: 100px
+      height: 185px
+      text-indent: -10000px
+      width: auto
+    h2
+      color: $gold
+      font-family: 'Playfair Display', serif
+      font-size: 40px
+      font-weight: 700
+      padding-top: 80px
+      text-transform: uppercase
+    h3
+      color: $dark-beige
+      font-size: 24px
+      padding-top: 20px
+      span
+        color: $gold
+
+  a
+    &.action-btn
+      @include inline-block
+      margin-top: 30px
+    &.arrow-down
+      @include horizontal-align
+      background: url(../images/arrow-down.svg) no-repeat center center
+      bottom: 20px
+      height: 50px
+      position: absolute
+      width: 65px
+
+  @media(max-width: 991px)
+    background-size: 70% auto
+
+  @media(max-width: 600px)
+    background-size: 100% auto
+
+
+
+
+
