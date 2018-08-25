@@ -1,16 +1,16 @@
 navExpands = function () {
   $('header').addClass('nav-is-open');
   $('button.lines-button.x').addClass('close');
-  $('section, footer').addClass('blur');
-  $('body').addClass('no-scroll');
-  headerHeight();
+  // $('section, footer').addClass('blur');
+  // $('body').addClass('no-scroll');
+  // headerHeight();
 }
 navCollapses = function () {
   $('header').removeClass('nav-is-open');
   $('button.lines-button.x').removeClass('close');
-  $('body').removeClass('no-scroll');
-  $('section, footer').removeClass('blur');
-  $('header').height('');
+  // $('body').removeClass('no-scroll');
+  // $('section, footer').removeClass('blur');
+  // $('header').height('');
 }
 
 mobileClass = function () {

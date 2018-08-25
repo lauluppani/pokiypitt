@@ -2,16 +2,15 @@ section#hero
   background: $charcoal url(../images/pattern-black.svg) repeat center center
   background-size: 40% auto
   min-height: 740px
-  padding-top: 78px
+  padding: 80px 0 0 0
   position: relative
-  text-align: center
   &:before, &:after
     content: ""
     height: 715px
     width: 85px
     position: absolute
     z-index: 0
-    top: 78px
+    top: 80px
 
   &:before
     background: url(../images/left-frame.svg)
@@ -45,18 +44,6 @@ section#hero
       padding-top: 20px
       span
         color: $gold
-
-  a
-    &.action-btn
-      @include inline-block
-      margin-top: 30px
-    &.arrow-down
-      @include horizontal-align
-      background: url(../images/arrow-down.svg) no-repeat center center
-      bottom: 20px
-      height: 50px
-      position: absolute
-      width: 65px
 
   @media(max-width: 991px)
     background-size: 70% auto

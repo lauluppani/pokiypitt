@@ -1,4 +1,58 @@
 section#quote
   background: $medium-beige
   color: $dark-gold
-  min-height: 900px
+  padding-bottom: 0
+  h1.section-heading
+    background: url(../images/quote.svg) no-repeat center center
+    background-size: contain
+    display: block
+    height: 430px
+    margin: 0 auto
+    text-indent: -10000px
+    width: auto
+
+  > .wrapper
+    > .row
+      align-items: center
+      display: flex
+      height: 100%
+
+      img
+        display: block
+        height: auto
+        margin: 0 auto
+        width: 100%
+        &.juli, &.marto
+          max-width: 360px
+        &.heart
+          max-width: 170px
+
+  h2
+    font-family: 'Playfair Display', serif
+    font-size: 24px
+    font-weight: 700
+    margin-bottom: 8px
+    text-transform: uppercase
+
+  p
+    font-family: 'Playfair Display', serif
+    font-weight: 400
+    font-size: 22px
+    font-style: italic
+
+    + img
+      display: block
+      margin: 0 auto
+      padding: 20px 0
+
+  @media(max-width: 991px)
+    padding-top: 30px
+    > .wrapper
+      > .row
+        margin-bottom: 30px
+        > div
+          &:nth-child(2)
+            padding: 0
+        img
+          &.heart
+            max-width: none
