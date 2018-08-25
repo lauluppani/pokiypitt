@@ -52,42 +52,37 @@
 
 %section#rsvp
   .wrapper
-    .row
-      .col-md-12.text-center
-        %h1.section-heading R.S.V.P.
-        %h2.section-subheading Vas a venir?
-    .row
-      %form#rsvpForm{:action => "//formspree.io/lauluppani+secasan@gmail.com", :method => "POST", :name => "sentMessage", :novalidate => ""}
-        .col-md-12
-          %input{:name => "_subject", :type => "hidden", :value => "Viti y Lucas - RSVP"}
-          %input{:name => "_gotcha", :style => "display:none", :type => "text"}
-          .form-group.col-md-6.radio-1
-            %label.radio-inline
-              %input{:name => "optradio", :required => "", :type => "radio", :value => "Cuenten conmigo!"}>
-              Cuenten conmigo!
-          .form-group.col-md-6.radio-2
-            %label.radio-inline
-              %input{:name => "optradio", :required => "", :type => "radio", :value => "No puedo ir."}>
-              No puedo ir
-          .form-group.col-md-6
-            %input.form-control{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "name", :placeholder => "Nombre *", :required => "", :type => "text"}
-            %p.help-block.text-danger
-          .form-group.col-md-6
-            %input.form-control{"data-validation-required-message" => "Por favor, ingresá tu apellido.", :name => "lastname", :placeholder => "Apellido *", :required => "", :type => "text"}
-            %p.help-block.text-danger
-          .form-group.col-md-12
-            %input.form-control{"data-validation-required-message" => "Por favor, ingresá tu email.", :name => "email", :placeholder => "Email *", :required => "", :type => "email"}
-            %p.help-block.text-danger
-        .col-md-12
-          #success
-          %button.btn.btn-xl.action-btn.large{:type => "submit"} RSVP
-          %p
-            %small
-              Por favor, confirmá para el
-              %strong 4 de enero.
+    .envelope
+      %h1.section-heading R.S.V.P.
+      %h2.section-subheading Vas a venir?
+      %form{:action => "https://formspree.io/lauluppani@email.com", :method => "POST", :id=>"rsvp-form"}
+        .row
+          .col-md-6
+            %input{:name => "subject", :type => "hidden", :value => "Poki & Pitt - RSVP"}
+            %input{:name => "optradio", :required => "", :type => "radio", :value => "Cuenten conmigo!", :id=>"radio1"}
+            %label{:for=>"radio1"} Cuenten conmigo!
+          .col-md-6
+            %input{:name => "optradio", :required => "", :type => "radio", :value => "No puedo ir", :id=>"radio2"}
+            %label{:for=>"radio2"} No puedo ir
+        .row
+          .col-md-6
+            %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "name", :required => "", :type => "text", :id=>"name"}
+            %label{:for=>"name"} Nombre *
+          .col-md-6
+            %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "name", :required => "", :type => "text", :id=>"surname"}
+            %label{:for=>"surname"} Apellido *
+          .col-md-12
+            %input{"data-validation-required-message" => "Por favor, ingresá tu email.", :name => "email", :required => "", :type => "email", :id=>"email"}
+            %label{:for=>"email"} Email *
+          .col-md-12
+            %button{:type => "submit"} RSVP
+            %p
+              %small
+                Por favor, confirmá para el
+                %strong 18 de octubre.
       :javascript
         var contactform =  document.getElementById('rsvpForm');
-        contactform.setAttribute('action', '//formspree.io/' + 'lauluppani+secasan' + '@' + 'gmail' + '.' + 'com');
+        contactform.setAttribute('action', '//formspree.io/' + 'lauluppani' + '@' + 'gmail' + '.' + 'com');
 %section#gifts
   .wrapper
     .row
