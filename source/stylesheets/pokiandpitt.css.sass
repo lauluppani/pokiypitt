@@ -46,7 +46,7 @@ body
         padding-left: 0
         padding-right: 0
 
-  a
+  a, button
     @include transition(all, 0.2s)
     color: $dark-gold
     text-decoration: none
@@ -63,6 +63,11 @@ body
       text-transform: uppercase
       &.gray
         background: $gray
+      &.xl
+        font-size: 22px
+        padding: 20px 105px
+      @media(max-width: 600px)
+        width: 100%
     &.arrow-down
       @include horizontal-align
       background: url(../images/arrow-down.svg) no-repeat center center
@@ -70,6 +75,16 @@ body
       height: 50px
       position: absolute
       width: 65px
+
+  button.action-btn
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    border: 0 none
+    &:hover
+      cursor: pointer
+    &:active, &:focus
+      outline: none
 
   section
     padding: 80px 0

@@ -2,8 +2,168 @@ section#rsvp
   background: $light-gold url(../images/pattern-gold.svg) repeat center center
   background-size: 40% auto
 
+  .envelope
+    background: $beige
+    color: $dark-gold
+    padding: 50px
+    position: relative
+    &:before, &:after
+      background: url(../images/envelope-border.svg) repeat-x center center
+      background-size: cover
+      content: ""
+      height: 10px
+      left: 0
+      position: absolute
+      width: 100%
+    &:before
+      top: 0
+    &:after
+      bottom: 0
+
+    img.stamp
+      position: absolute
+      right: 40px
+      top: 40px
+
+    h1
+      margin-bottom: 20px
+
+    h2
+      font-family: 'Playfair Display', serif
+      font-size: 30px
+      font-style: italic
+      margin-bottom: 30px
+
+    form
+      margin: 0 auto
+      max-width: 600px
+      text-align: left
+
+      // Styled Radio Buttons
+      .styled-radio
+        display: block
+        margin-bottom: 20px
+        input[type="radio"]
+          -moz-appearance: none
+          -webkit-appearance: none
+          @include inline-block
+          appearance: none
+          cursor: default
+          margin-left: -99999px
+          position: absolute
+          vertical-align: middle
+          ~ label 
+            -moz-user-select: none
+            -ms-user-select: none
+            -webkit-user-select: none
+            @include inline-block
+            color: $dark-gold
+            font-size: 15px
+            font-weight: 400
+            margin: 0 35px 0 0
+            position: relative
+            user-select: none
+            vertical-align: middle
+            &:before
+              @include inline-block
+              @include transition(all 0.15s)
+              border-radius: 50%
+              box-shadow: 0 0 0 2px $dark-gold inset
+              content: ""
+              height: 24px
+              margin-right: 15px
+              position: relative
+              vertical-align: middle
+              width: 24px
+            &:after
+              border-radius: 50%
+              content: ""
+              display: block
+              height: 20px
+              left: 2px
+              position: absolute
+              top: 2px
+              width: 20px
+              z-index: 1
+
+          &:checked, &:focus
+            outline: 0 none
+          
+          &:checked    
+            ~ label
+              color: $dark-gold
+              &:before
+                box-shadow: 0 0 0 2px $dark-gold inset
+              &:after
+                background-color: $dark-gold
+                height: 12px
+                left: 6px
+                top: 6px
+                width: 12px      
+
+        input:hover:not(:checked) ~ label:before 
+          box-shadow: 0 0 0 2px darken($dark-gold, 5%) inset, 0 0 6px rgba(black, 0.1)
+
+      input[type='text'], input[type='email']
+        @include box-sizing
+        @include transition
+        background: transparent
+        border: 2px solid $light-gold
+        margin-bottom: 20px
+        color: $dark-gold
+        font-size: 16px
+        max-width: 100%
+        padding: 15px 10px
+        width: 100%
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        &:focus
+          box-shadow: 0 0 20px rgba($dark-gold, 0.5)
+          border-color: darken($dark-gold, 5%)
+          outline: 0 none
+        &::-webkit-input-placeholder
+          color: $dark-gold
+        &:-moz-placeholder
+          color: $dark-gold
+        &::-moz-placeholder
+          color: $dark-gold
+        &:-ms-input-placeholder
+          color: $dark-gold
+
+      label
+        font-size: 16px
+        line-height: 18px
+        + input
+          margin-top: 5px
+
+      .action
+        text-align: center
+        button
+          margin: 0 auto
+
+        p
+          font-family: 'Playfair Display', serif
+          margin-top: 15px
+          font-size: 14px
+          font-variant-numeric: lining-nums
+
   @media(max-width: 991px)
     background-size: 70% auto
 
+  @media(max-width: 767px)
+    .envelope
+      img.stamp
+        margin: 0 auto 20px 0
+        position: relative
+        right: auto
+        top: auto
+
   @media(max-width: 600px)
     background-size: 100% auto
+
+    .envelope
+      padding: 40px 30px
+
+
+
