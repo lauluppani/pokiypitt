@@ -1,5 +1,65 @@
 footer#pokiandpitt
   background: $beige
   color: $dark-gold
-  padding: 100px 0
+  padding: 80px 0 40px 0
   text-align: center
+
+  h1.section-heading
+    font-family: 'LearningCurve Bold'
+    font-size: 80px
+    margin-bottom: 50px
+    text-transform: none
+
+  h2
+    color: $gray
+    font-size: 18px
+    font-weight: 500
+    line-height: 22px
+    margin: 0 auto 30px auto
+    max-width: 500px
+    text-transform: uppercase
+    span
+      color: $dark-gold
+
+  h3
+    font-family: 'Playfair Display', serif
+    font-size: 30px
+    font-weight: 700
+    margin: 25px auto
+    max-width: 200px
+    position: relative
+    &:before, &:after
+      content: ""
+      height: 45px
+      position: absolute
+      top: 0
+      width: 35px
+    &:before
+      background: url(/images/cheers-left.svg) no-repeat center center
+      left: 0
+    &:after
+      background: url(/images/cheers-right.svg) no-repeat center center
+      right: 0
+
+  hgroup + a
+    font-family: 'Playfair Display', serif
+    font-size: 16px
+
+  p
+    color: $gray
+    margin-top: 3px
+    font-size: 12px
+    + p
+      margin-top: 30px
+      a
+        color: $gray
+        i
+          color: $dark-gold
+
+  @media(max-width: 991px)
+    padding-top: 60px
+    h1.section-heading
+      font-size: 60px
+      margin-bottom: 30px
+    h2
+      max-width: none

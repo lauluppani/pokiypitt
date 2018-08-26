@@ -55,7 +55,10 @@ $(document).ready(function(){
 });
 
 
-$(window).scroll(function() {    
+var initialScrollEvent = true;
+
+$(window).scroll(function() {
+  if (!initialScrollEvent) {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 1) {
@@ -63,8 +66,9 @@ $(window).scroll(function() {
     } else {
         $("body").removeClass("scroll");
     }
+  }
+  initialScrollEvent = false;
 });
-
 
 $(window).resize(function() {
   mobileClass();
