@@ -60,15 +60,15 @@
       %form{:action=>"https://formspree.io/pokiypitt+rsvp@gmail.com", :method => "POST", :id=>"rsvp-form"}
         %input{:name => "_language", :type => "hidden", :value => "es"}
         %input{:name => "_format", :type => "hidden", :value => "plain"}
+        %input#_subject{:name => "_subject", :type => "hidden", :value => "Pokiypitt.com.ar"}
         .row
           .col-md-6
-            %input{:name => "Asunto", :type => "hidden", :value => "Poki & Pitt - RSVP"}
             %span.styled-radio
-              %input{:type=>"radio", :value=>"Cuenten conmigo!", :required => "", :name=>"RSVP", :id=>"si", :checked=>"checked"}
+              %input{:type=>"radio", :value=>"Cuenten conmigo!", :required => "", :name=>"¿Vas a venir?", :id=>"si", :checked=>"checked"}
               %label{:for=>"si"} Cuenten conmigo!
           .col-md-6
             %span.styled-radio
-              %input{:type=>"radio", :value=>"No puedo ir", :required => "", :name=>"RSVP", :id=>"no"}
+              %input{:type=>"radio", :value=>"No puedo ir", :required => "", :name=>"¿Vas a venir?", :id=>"no"}
               %label{:for=>"no"} No puedo ir
         .row
           .col-md-6
@@ -76,10 +76,10 @@
           .col-md-6
             %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "Apellido", :required => "", :placeholder=>"Apellido *", :type => "text", :id=>"surname"}
           .col-md-12
-            %input{"data-validation-required-message" => "Por favor, ingresá tu email.", :name => "E-mail", :required => "", :placeholder=>"Email *", :type => "email", :id=>"email"}
+            %input{"data-validation-required-message" => "Por favor, ingresá tu email.", :name => "E-mail", :required => "", :placeholder=>"E-mail *", :type => "email", :id=>"email"}
           .col-md-12
-            %label{:for=>"preferencia"} Si tenés alguna preferencia para el menú (Kosher, Vegano, Vegetariano, etc), por favor aclará acá:
-            %input{:name => "Preferencia", :type => "text", :id=>"preferencia"}
+            %label{:for=>"comida"} Si tenés alguna preferencia para el menú (Kosher, Vegano, Vegetariano, etc), por favor aclará acá:
+            %input{:name => "comida", :type => "text", :id=>"comida"}
           .col-md-12.action
             %button{:type => "submit", :class=>"action-btn xl", :id=>"sendMessage"} RSVP
             %p

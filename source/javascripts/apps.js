@@ -52,6 +52,11 @@ $(document).ready(function(){
     return false;
   });
 
+  var $sub = $("#_subject");
+  $("#email").on("input", function() {
+      $sub.val("Pokiypitt.com.ar | " + $(this).val() + "");
+  });
+
   $('.galeria-wrapper').magnificPopup({
     delegate: 'a', // child items selector, by clicking on it popup will open
     type: 'image',
