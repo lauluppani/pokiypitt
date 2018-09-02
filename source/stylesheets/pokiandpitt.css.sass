@@ -9,7 +9,7 @@
 
 // Vendor
 @import animated-hamburguer-icon.sass
-@import vendor/_bootstrap-grid.scss
+@import vendor/bootstrap-grid.scss
 @import vendor/slick.scss
 @import vendor/jquery.fancybox.min.scss
 
@@ -98,6 +98,8 @@ body
   section
     padding: 80px 0
     text-align: center
+    @media(max-width: 600px)
+      padding: 50px 0
 
   h1
     &.section-heading

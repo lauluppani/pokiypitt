@@ -1,3 +1,73 @@
 section#counter
   background: $charcoal
   color: $beige
+
+  #countdown
+    margin: 60px 0
+    p#end
+      font-family: 'Playfair Display', serif
+      font-style: italic
+      font-size: 24px
+      color: $dark-beige
+
+    #dias, #horas, #minutos, #segundos
+      @include inline-block
+      background: $beige
+      color: $dark-gold
+      font-family: 'Playfair Display', serif
+      font-size: 50px
+      font-variant-numeric: lining-nums
+      margin-bottom: 25px
+      margin-right: 4%
+      min-width: 8%
+      position: relative
+      vertical-align: middle
+      &:last-of-type
+        margin-right: 0
+      &:before, &:after
+        bottom: 0
+        color: $beige
+        position: absolute
+        text-align: center
+      &:before
+        bottom: -50%
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        font-weight: 500
+        left: 0
+        text-align: center
+        text-transform: uppercase
+        width: 100%
+      &:after
+        content: ":"
+        height: 100%
+        font-size: 40px
+        line-height: 60px
+        right: -50%
+        text-align: center
+        width: 50%
+    #dias
+      &:before
+        content: "Días"
+    #horas
+      &:before
+        content: "Horas"
+    #minutos
+      &:before
+        content: "Minutos"
+    #segundos
+      &:before
+        content: "Segundos"
+      &:after
+        display: none
+
+  @media(max-width: 960px)
+    #countdown
+      #dias, #horas, #minutos, #segundos
+        margin-right: 8%
+        min-width: 16%
+  @media(max-width: 600px)
+    #countdown
+      #dias, #horas, #minutos, #segundos
+        zoom: 0.8
+
