@@ -60,7 +60,7 @@
       %form{:action => "https://formspree.io/pokiypitt+rsvp@gmail.com", :method => "POST", :id=>"rsvp-form"}
         .row
           .col-md-6
-            %input{:name => "subject", :type => "hidden", :value => "Poki & Pitt - RSVP"}
+            %input{:name => "Asunto", :type => "hidden", :value => "Poki & Pitt - RSVP"}
             %span.styled-radio
               %input{:type=>"radio", :value=>"Cuenten conmigo!", :required => "", :name=>"RSVP", :id=>"si", :checked=>"checked"}
               %label{:for=>"si"} Cuenten conmigo!
@@ -79,13 +79,10 @@
             %label{:for=>"preferencia"} Si tenés alguna preferencia para el menú (Kosher, Vegano, Vegetariano, etc), por favor aclará acá:
             %input{:name => "Preferencia", :type => "text", :id=>"preferencia"}
           .col-md-12.action
-            %button{:type => "submit", :class=>"action-btn xl"} RSVP
+            %button{:type => "submit", :class=>"action-btn xl", :id=>"sendMessage"} RSVP
             %p
               Por favor, confirmá para el
               %strong 18 de Octubre.
-      / :javascript
-      /   var contactform =  document.getElementById('rsvpForm');
-      /   contactform.setAttribute('action', '//formspree.io/' + 'pokiypitt+rsvp' + '@' + 'gmail' + '.' + 'com');
 %section#gifts
   .wrapper
     %h1.section-heading Regalos
