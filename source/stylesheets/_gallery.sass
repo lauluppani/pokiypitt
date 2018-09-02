@@ -1,3 +1,63 @@
 section#gallery
   background: $gray
-  // min-height: 730px
+  padding: 0
+  .galeria-wrapper
+    .row
+      a
+        @include inline-block
+        height: 250px
+        vertical-align: middle
+        &:active, &:focus
+          outline: none
+        &:hover
+          opacity: 0.7
+        &#pic-1
+          background: url(../images/galeria/01.jpg) no-repeat center center
+          background-size: cover
+        &#pic-2
+          background: url(../images/galeria/02.jpg) no-repeat center center
+          background-size: cover
+        &#pic-3
+          background: url(../images/galeria/03.jpg) no-repeat center center
+          background-size: cover
+        &#pic-4
+          background: url(../images/galeria/04.jpg) no-repeat center center
+          background-size: cover
+        &#pic-5
+          background: url(../images/galeria/05.jpg) no-repeat center center
+          background-size: cover
+        &#pic-6
+          background: url(../images/galeria/06.jpg) no-repeat center center
+          background-size: cover
+        &#pic-7
+          background: url(../images/galeria/07.jpg) no-repeat center center
+          background-size: cover
+        &#pic-8
+          background: url(../images/galeria/08.jpg) no-repeat center center
+          background-size: cover
+        &#pic-9
+          background: url(../images/galeria/09.jpg) no-repeat center center
+          background-size: cover
+        &#pic-10
+          background: url(../images/galeria/10.jpg) no-repeat center center
+          background-size: cover
+        &#pic-11
+          background: url(../images/galeria/11.jpg) no-repeat center center
+          background-size: cover
+        &#pic-12
+          background: url(../images/galeria/12.jpg) no-repeat center center
+          background-size: cover
+
+.mfp-arrow
+  &:before
+    display: none
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close
+  color: $dark-gold
+.mfp-arrow-left:after
+  border-right-color: $dark-gold
+.mfp-arrow-right:after
+  border-left-color: $dark-gold
+
+
+
+

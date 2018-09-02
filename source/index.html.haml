@@ -42,11 +42,12 @@
           %span Empezando
           %strong a las 17:30hs
           %span Puntual
-    %a{:href => "#map", :class=>"address page-scroll"}
+    .address
       %img{:src=>"../images/map-marker.svg", :width=>"20", :height=>"30"} 
       %h2
-        %strong Quinta de Anchorena
-        %span Anchorena 477, San Isidro, Buenos Aires, Argentina
+        %a{:href => "#map", :class=>"page-scroll"}
+          %strong Quinta de Anchorena
+          %span Anchorena 477, San Isidro, Buenos Aires, Argentina
     %a{:href => "#map", :class=>"action-btn gray page-scroll"} Ver Mapa
     %a{:href => "#rsvp", :class=>"arrow-down page-scroll"}
 
@@ -56,7 +57,7 @@
       %img{:src=>"../images/stamp.svg", :width=>"130", :height=>"100", :class=>"stamp"} 
       %h1.section-heading R.S.V.P.
       %h2 ¿Vas a venir?
-      %form{:action => "https://formspree.io/lauluppani+pokiandpitt@email.com", :method => "POST", :id=>"rsvp-form"}
+      %form{:action => "https://formspree.io/pokiandpitt+rsvp@email.com", :method => "POST", :id=>"rsvp-form"}
         .row
           .col-md-6
             %input{:name => "subject", :type => "hidden", :value => "Poki & Pitt - RSVP"}
@@ -84,7 +85,7 @@
               %strong 18 de Octubre.
       / :javascript
       /   var contactform =  document.getElementById('rsvpForm');
-      /   contactform.setAttribute('action', '//formspree.io/' + 'lauluppani+pokiandpitt' + '@' + 'gmail' + '.' + 'com');
+      /   contactform.setAttribute('action', '//formspree.io/' + 'pokiandpitt+rsvp' + '@' + 'gmail' + '.' + 'com');
 %section#gifts
   .wrapper
     %h1.section-heading Regalos
@@ -110,21 +111,20 @@
     %img{:src => "../images/heart-lock.svg", :width=>"210", :height=>"55"}
 
 %section#gallery
-  .wrapper
-    .galeria-wrapper
-      / .fila.impar
-      /   %a#pic-1.box-1{:href => "../images/galeria/01.jpg"}
-      /   %a#pic-2.box-2{:href => "../images/galeria/02.jpg"}
-      /   %a#pic-3.box-3{:href => "../images/galeria/03.jpg"}
-      /   %a#pic-4.box-4{:href => "../images/galeria/04.jpg"}
-      / .fila.par
-      /   %a#pic-5.box-1{:href => "../images/galeria/05.jpg"}
-      /   %a#pic-6.box-2{:href => "../images/galeria/06.jpg"}
-      /   %a#pic-7.box-3{:href => "../images/galeria/07.jpg"}
-      /   %a#pic-8.box-4{:href => "../images/galeria/08.jpg"}
-      / .fila.impar
-      /   %a#pic-9.box-1{:href => "../images/galeria/09.jpg"}
-      /   %a#pic-10.box-2{:href => "../images/galeria/10.jpg"}
-      /   %a#pic-11.box-3{:href => "../images/galeria/11.jpg"}
-      /   %a#pic-12.box-4{:href => "../images/galeria/12.jpg"}
+  .galeria-wrapper
+    .row
+      %a#pic-1{:href => "../images/galeria/01.jpg", :class=>"col-md-4 col-sm-7 col-xs-7"}>
+      %a#pic-2{:href => "../images/galeria/02.jpg", :class=>"col-md-2 col-sm-5 col-xs-5"}>
+      %a#pic-3{:href => "../images/galeria/03.jpg", :class=>"col-md-4 col-sm-5 col-xs-5"}>
+      %a#pic-4{:href => "../images/galeria/04.jpg", :class=>"col-md-2 col-sm-7 col-xs-7"}>
+    .row
+      %a#pic-5{:href => "../images/galeria/05.jpg", :class=>"col-md-2 col-sm-7 col-xs-7"}>
+      %a#pic-6{:href => "../images/galeria/06.jpg", :class=>"col-md-4 col-sm-5 col-xs-5"}>
+      %a#pic-7{:href => "../images/galeria/07.jpg", :class=>"col-md-2 col-sm-5 col-xs-5"}>
+      %a#pic-8{:href => "../images/galeria/08.jpg", :class=>"col-md-4 col-sm-7 col-xs-7"}>
+    .row
+      %a#pic-9{:href => "../images/galeria/09.jpg", :class=>"col-md-4 col-sm-7 col-xs-7"}>
+      %a#pic-10{:href => "../images/galeria/10.jpg", :class=>"col-md-2 col-sm-5 col-xs-5"}>
+      %a#pic-11{:href => "../images/galeria/11.jpg", :class=>"col-md-4 col-sm-5 col-xs-5"}>
+      %a#pic-12{:href => "../images/galeria/12.jpg", :class=>"col-md-2 col-sm-7 col-xs-7"}>
 
