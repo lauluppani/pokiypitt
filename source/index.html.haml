@@ -62,22 +62,22 @@
           .col-md-6
             %input{:name => "subject", :type => "hidden", :value => "Poki & Pitt - RSVP"}
             %span.styled-radio
-              %input{:type=>"radio", :value=>"Cuenten conmigo!", :required => "", :name=>"rsvp", :id=>"si", :checked=>"checked"}
+              %input{:type=>"radio", :value=>"Cuenten conmigo!", :required => "", :name=>"RSVP", :id=>"si", :checked=>"checked"}
               %label{:for=>"si"} Cuenten conmigo!
           .col-md-6
             %span.styled-radio
-              %input{:type=>"radio", :value=>"No puedo ir", :required => "", :name=>"rsvp", :id=>"no"}
+              %input{:type=>"radio", :value=>"No puedo ir", :required => "", :name=>"RSVP", :id=>"no"}
               %label{:for=>"no"} No puedo ir
         .row
           .col-md-6
-            %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "name", :required => "", :placeholder=>"Nombre *", :type => "text", :id=>"name"}
+            %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "Nombre", :required => "", :placeholder=>"Nombre *", :type => "text", :id=>"name"}
           .col-md-6
-            %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "surname", :required => "", :placeholder=>"Apellido *", :type => "text", :id=>"surname"}
+            %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "Apellido", :required => "", :placeholder=>"Apellido *", :type => "text", :id=>"surname"}
           .col-md-12
-            %input{"data-validation-required-message" => "Por favor, ingresá tu email.", :name => "email", :required => "", :placeholder=>"Email *", :type => "email", :id=>"email"}
+            %input{"data-validation-required-message" => "Por favor, ingresá tu email.", :name => "E-mail", :required => "", :placeholder=>"Email *", :type => "email", :id=>"email"}
           .col-md-12
             %label{:for=>"preferencia"} Si tenés alguna preferencia para el menú (Kosher, Vegano, Vegetariano, etc), por favor aclará acá:
-            %input{:name => "preferencia", :type => "text", :id=>"preferencia"}
+            %input{:name => "Preferencia", :type => "text", :id=>"preferencia"}
           .col-md-12.action
             %button{:type => "submit", :class=>"action-btn xl"} RSVP
             %p
