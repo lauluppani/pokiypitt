@@ -79,6 +79,8 @@ body
         padding: 20px 105px
       @media(max-width: 600px)
         width: 100%
+        &.action-btn
+          padding: 20px
     &.arrow-down
       @include horizontal-align
       background: url(../images/arrow-down.svg) no-repeat center center
@@ -111,7 +113,9 @@ body
       line-height: 50px
       margin-bottom: 30px
       text-transform: uppercase
-
+      @media(max-width: 600px)
+        font-size: 40px
+        line-height: 42px
 
 
 

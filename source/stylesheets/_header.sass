@@ -61,6 +61,10 @@ header
           color: rgba($dark-gold, 0.5)
           &:before
             background-image: url(/images/banner-hover.svg)
+          @media(max-width: 600px)
+            color: $dark-gold
+            &:before
+              background-image: url(/images/banner.svg)
 
   button.lines-button
     -webkit-appearance: none
