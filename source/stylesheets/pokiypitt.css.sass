@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Roboto:300,400,500,700,900')
+
+// @font-face
+@import learning-curve.sass
+
+@import reset.sass
+@import colors.sass
+@import mixins.sass
+
+// Vendor
+@import animated-hamburguer-icon.sass
+@import vendor/bootstrap-grid.scss
+@import vendor/jquery.magnific-popup.scss
+
+// Sections
+@import header.sass
+@import footer.sass
+
+@import hero.sass
+@import quote.sass
+@import ceremony.sass
+@import rsvp.sass
+@import gifts.sass
+@import map.sass
+@import gallery.sass
+@import counter.sass
+
+html, body
+  overflow-x: hidden
+
+.hide
+  display: none
+  
+body
+  -webkit-text-size-adjust: 100%
+  background: $beige
+  color: white
+  font-family: 'Roboto', sans-serif
+  font-size: 13px
+  font-weight: 400
+  line-height: 1.4
+
+  &.scroll
+    header
+      a.logo 
+        &:before
+          opacity: 0
+          pointer-events: none
+
+
+  .wrapper
+    margin-left: auto
+    margin-right: auto
+    max-width: 1200px
+    padding-left: 20px
+    padding-right: 20px
+    &.full_width_mobile
+      @media (max-width: 767px)
+        padding-left: 0
+        padding-right: 0
+
+  a, button
+    @include box-sizing
+    @include transition(all, 0.2s)
+    color: $dark-gold
+    text-decoration: none
+    &:hover
+      opacity: 0.75
+    &.action-btn
+      @include inline-block
+      background: $dark-gold
+      color: $beige
+      font-size: 14px
+      font-weight: 500
+      margin-top: 30px
+      padding: 10px 35px
+      text-transform: uppercase
+      &.gray
+        background: $gray
+      &.xl
+        font-size: 22px
+        padding: 20px 105px
+      @media(max-width: 600px)
+        width: 100%
+        &.action-btn
+          padding: 20px
+    &.arrow-down
+      @include horizontal-align
+      background: url(../images/arrow-down.svg) no-repeat center center
+      bottom: 20px
+      height: 50px
+      position: absolute
+      width: 65px
+
+  button.action-btn
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    border: 0 none
+    &:hover
+      cursor: pointer
+    &:active, &:focus
+      outline: none
+
+  section
+    padding: 80px 0
+    text-align: center
+    @media(max-width: 600px)
+      padding: 50px 0
+
+  h1
+    &.section-heading
+      font-family: 'Playfair Display', serif
+      font-size: 50px
+      font-weight: 700
+      line-height: 50px
+      margin-bottom: 30px
+      text-transform: uppercase
+      @media(max-width: 600px)
+        font-size: 40px
+        line-height: 42px
+
+
+
+
+
