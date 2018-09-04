@@ -1,16 +1,12 @@
 navExpands = function () {
   $('header').addClass('nav-is-open');
   $('button.lines-button.x').addClass('close');
-  // $('section, footer').addClass('blur');
-  // $('body').addClass('no-scroll');
-  // headerHeight();
+  $('header nav .row.hide').slideDown(1000);
 }
 navCollapses = function () {
   $('header').removeClass('nav-is-open');
   $('button.lines-button.x').removeClass('close');
-  // $('body').removeClass('no-scroll');
-  // $('section, footer').removeClass('blur');
-  // $('header').height('');
+  $('header nav .row.hide').slideUp(1000);
 }
 
 mobileClass = function () {
@@ -41,20 +37,13 @@ $(document).ready(function(){
     if ( !$(this).hasClass('close') ) {
       navExpands();
       if ($('body').hasClass('mobile')) {
-        // $('nav .wrapper').addClass('open').show();
       }    
     } else {
       navCollapses();
       if ($('body').hasClass('mobile')) {
-        // $('nav .wrapper').removeClass('open').hide();
       } 
     }      
     return false;
-  });
-
-  var $sub = $("#_subject");
-  $("#email").on("input", function() {
-      $sub.val("Pokiypitt.com.ar | " + $(this).val() + "");
   });
 
   $('.galeria-wrapper').magnificPopup({

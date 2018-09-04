@@ -39,6 +39,16 @@ section#rsvp
       max-width: 600px
       text-align: left
 
+      .error
+        input[type='text'], input[type='email']
+          border-color: $error
+
+        .error-message
+          color: $error
+          bottom: 10px
+          font-size: 11px
+          position: absolute
+
       // Styled Radio Buttons
       .styled-radio
         display: block
@@ -52,6 +62,10 @@ section#rsvp
           margin-left: -99999px
           position: absolute
           vertical-align: middle
+          &[disabled="disabled"]
+            opacity: 0.5
+            + label
+              opacity: 0.5
           ~ label 
             -moz-user-select: none
             -ms-user-select: none
@@ -64,6 +78,7 @@ section#rsvp
             position: relative
             user-select: none
             vertical-align: middle
+            z-index: 0
             &:before
               @include inline-block
               @include transition(all 0.15s)
@@ -110,7 +125,7 @@ section#rsvp
         background: transparent
         border: 2px solid $light-gold
         border-radius: 0
-        margin-bottom: 20px
+        margin-bottom: 30px
         color: $dark-gold
         font-size: 16px
         max-width: 100%
@@ -131,6 +146,8 @@ section#rsvp
           color: $dark-gold
         &:-ms-input-placeholder
           color: $dark-gold
+        &[disabled="disabled"]
+          opacity: 0.5
 
       label
         font-size: 16px
@@ -141,13 +158,22 @@ section#rsvp
       .action
         text-align: center
         button
+          @include transition
           margin: 0 auto
-
+          &.sending
+            background: $success
+          &[disabled="disabled"]
+            background: $success
+            opacity: 0.5
         p
           font-family: 'Playfair Display', serif
           margin-top: 15px
           font-size: 14px
           font-variant-numeric: lining-nums
+          &.success
+            color: $success
+            font-size: 18px
+            margin: 0 0 20px 0
 
   @media(max-width: 991px)
     background-size: 70% auto

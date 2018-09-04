@@ -57,31 +57,29 @@
       %img{:src=>"../images/stamp.svg", :width=>"130", :height=>"100", :class=>"stamp"} 
       %h1.section-heading R.S.V.P.
       %h2 ¿Vas a venir?
-      %form{:action=>"https://formspree.io/pokiypitt+rsvp@gmail.com", :method => "POST", :id=>"rsvp-form"}
-        %input{:name => "_language", :type => "hidden", :value => "es"}
-        %input{:name => "_format", :type => "hidden", :value => "plain"}
-        %input#_subject{:name => "_subject", :type => "hidden", :value => "Pokiypitt.com.ar"}
+      %form{:method => "post", :id=>"rsvp-form"}
         .row
           .col-md-6
             %span.styled-radio
-              %input{:type=>"radio", :value=>"Cuenten conmigo!", :required => "", :name=>"¿Vas a venir?", :id=>"si", :checked=>"checked"}
-              %label{:for=>"si"} Cuenten conmigo!
+              %input{:type=>"radio", :value=>"Cuenten conmigo!", :name=>"rsvp", :id=>"rsvp-si", :checked=>"checked"}
+              %label{:for=>"rsvp-si"} Cuenten conmigo!
           .col-md-6
             %span.styled-radio
-              %input{:type=>"radio", :value=>"No puedo ir", :required => "", :name=>"¿Vas a venir?", :id=>"no"}
-              %label{:for=>"no"} No puedo ir
+              %input{:type=>"radio", :value=>"No puedo ir", :name=>"rsvp", :id=>"rsvp-no"}
+              %label{:for=>"rsvp-no"} No puedo ir
         .row
           .col-md-6
-            %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "Nombre", :required => "", :placeholder=>"Nombre *", :type => "text", :id=>"name"}
+            %input{:name => "nombre", :placeholder=>"Nombre *", :type => "text", :id=>"nombre"}
           .col-md-6
-            %input{"data-validation-required-message" => "Por favor, ingresá tu nombre.", :name => "Apellido", :required => "", :placeholder=>"Apellido *", :type => "text", :id=>"surname"}
+            %input{:name => "apellido", :placeholder=>"Apellido *", :type => "text", :id=>"apellido"}
           .col-md-12
-            %input{"data-validation-required-message" => "Por favor, ingresá tu email.", :name => "E-mail", :required => "", :placeholder=>"E-mail *", :type => "email", :id=>"email"}
+            %input{:name => "email", :placeholder=>"E-mail *", :type => "email", :id=>"email"}
           .col-md-12
             %label{:for=>"comida"} Si tenés alguna preferencia para el menú (Kosher, Vegano, Vegetariano, etc), por favor aclará acá:
             %input{:name => "comida", :type => "text", :id=>"comida"}
           .col-md-12.action
-            %button{:type => "submit", :class=>"action-btn xl", :id=>"sendMessage"} RSVP
+            %button{:type => "submit", :class=>"action-btn xl"} RSVP
+            %input.hide{:type => "text", :name => "security", :id => "security"}
             %p
               Por favor, confirmá para el
               %strong 18 de Octubre.
