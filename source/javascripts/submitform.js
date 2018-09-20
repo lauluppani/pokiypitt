@@ -18,23 +18,23 @@ $(document).ready(function(){
     // VALIDATIONS
     
     if(nombre == '') {
-      $("#nombre").parent().append('<span class="error-message">Por favor, ingresa tu nombre.</span>');
+      $("#nombre").parent().append('<span class="error-message">Por favor, ingresá tu nombre.</span>');
       $("#nombre").parent().addClass('error');
       hasError = true;
     }
 
     if(apellido == '') {
-      $("#apellido").parent().append('<span class="error-message">Por favor, ingresa tu apellido.</span>');
+      $("#apellido").parent().append('<span class="error-message">Por favor, ingresá tu apellido.</span>');
       $("#apellido").parent().addClass('error');
       hasError = true;
     }
 
     if(email == '') {
-      $("#email").parent().append('<span class="error-message">Por favor, ingresa tu email.</span>');
+      $("#email").parent().append('<span class="error-message">Por favor, ingresá tu email.</span>');
       $("#email").parent().addClass('error');
       hasError = true;
     } else if(!emailReg.test(email)) {
-      $("#email").parent().append('<span class="error-message">Direccion de correo invalida.</span>');
+      $("#email").parent().append('<span class="error-message">Dirección de correo inválida.</span>');
       $("#email").parent().addClass('error');
       hasError = true;
     }   
